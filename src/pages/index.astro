@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../../styles/pages/index.scss";
+import { Icon } from "astro-icon";
+import Card from "../components/Card.astro";
+---
+
+<Layout>
+	<main class="indexContainer">
+		<h1>travel<span>app</span></h1>
+
+		<div class="header">
+			<h3>Hi <b>Alex</b>, where do you want to go today?</h3>
+			<div class="profile">
+				<img
+					src="https://www.pixelmator.com/community/download/file.php?avatar=17785_1569233053.png"
+				/>
+			</div>
+		</div>
+
+		<div class="search">
+			<Icon
+				pack="ion"
+				name="search-outline"
+				width="21px"
+				color="#cdcdcd"
+			/>
+			<input type="text" placeholder="Discover a city here..." />
+			<Icon
+				pack="ion"
+				name="file-tray-stacked-sharp"
+				width="18px"
+				color="#aaa"
+			/>
+		</div>
+
+		<div class="categories">
+			<h3>Categories</h3>
+
+			<div class="categoriesList">
+				<div class="item">
+					<div class="emoji">🗻</div>
+					<span>Mountain</span>
+				</div>
+				<div class="item">
+					<div class="emoji">👙</div>
+					<span>Beach</span>
+				</div>
+				<div class="item">
+					<div class="emoji">🎡</div>
+					<span>Park</span>
+				</div>
+				<div class="item">
+					<div class="emoji">⛺</div>
+					<span>Camp</span>
+				</div>
+				<div class="item">
+					<div class="emoji">🌃</div>
+					<span>City</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="explore">
+			<h3>Explore Cities</h3>
+
+			<div class="filterCities">
+				<div class="item active">All</div>
+				<div class="item">Popular</div>
+				<div class="item">Recomended</div>
+			</div>
+
+			<div class="cardsContainer">
+				<Card place="Colosseum" city="Rome" />
+				<Card place="Colosseum" city="Rome" />
+				<Card place="Colosseum" city="Rome" />
+				<Card place="Colosseum" city="Rome" />
+				<Card place="Colosseum" city="Rome" />
+				<Card place="Colosseum" city="Rome" />
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+
+</style>

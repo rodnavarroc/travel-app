@@ -1,0 +1,31 @@
+---
+import "../../styles/components/Card.scss";
+import { Icon } from "astro-icon";
+
+export interface Props {
+	place: string;
+	city: string;
+}
+
+const { place, city } = Astro.props;
+---
+
+<div class="cardContainer">
+	<div class="cardContent">
+		<div class="cover-image">
+			<img
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/2560px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg"
+			/>
+			<p>{place}</p>
+			<p>
+				<Icon
+					pack="ion"
+					name="md-pin"
+					width="12px"
+					color="#aaa"
+				/>
+				&nbsp;{city}
+			</p>
+		</div>
+	</div>
+</div>
